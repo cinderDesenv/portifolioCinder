@@ -11,10 +11,10 @@ html {
 
 :root {
     --primaria: #1DB954;
-    --secundaria: #00a86b;   
-    --escuro: #121212;       
-    --maisEscuro: #0a0a0a;   
-    --claro: #e0e0e0;        
+    --secundaria: #00a86b; 
+    --escuro: #121212; 
+    --maisEscuro: #0a0a0a; 
+    --claro: #e0e0e0; 
     --vidro: rgba(255, 255, 255, 0.20); 
 }
 
@@ -23,12 +23,13 @@ body {
     color: var(--claro);
 }
 
+/* === Navegação === */
 .navegacao { 
     position: fixed;
-    background: var(--vidro);
+    background: #179142;
     width: 100%;
     z-index: 100;
-    padding: 1.5rem;
+    padding: 1.0rem;
 }
 
 .menu { 
@@ -61,13 +62,14 @@ body {
     width: 100%;
 }
 
+/* === Cabeçalho (Início) === */
 .foto-perfil {
     animation: flutuar 5s ease-in-out infinite;
     width: 300px;
     height: 300px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6),
-            0px 0px 12px var(--primaria);
-            border-radius: 50%;
+             0px 0px 12px var(--primaria);
+             border-radius: 50%;
     border: 4px solid var(--vidro);
 }
 
@@ -91,6 +93,16 @@ h1 {
     color: var(--claro);
 }
 
+/* Garante que o conteúdo fique por cima das partículas */
+.cabecalho,
+.sobre,
+.projetos,
+.contatos {
+    position: relative;
+    z-index: 1;
+}
+
+/* === Sobre Mim === */
 .sobre { 
     padding: 6rem 2rem;
 }
@@ -117,6 +129,7 @@ h1 {
     font-size: 1.2rem;
 }
 
+/* === Projetos === */
 .projetos {
     padding: 6rem 2rem;
 }
@@ -141,7 +154,7 @@ h1 {
 
 .projetos-card:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6),
-            0px 0px 12px var(--primaria);
+             0px 0px 12px var(--primaria);
     transform: translateY(-10px) scale(1.03);
 }
 
@@ -163,9 +176,8 @@ h1 {
     opacity: 1;
 }
 
-.caixa-textos-projeto {
+.caixa-textos-projetos {
     padding: 1.5rem;
-
 }
 
 .info-projetos {
@@ -183,6 +195,7 @@ h1 {
     margin: 5px 16px;
 }
 
+/* === Contatos === */
 .contatos {
     padding: 6rem 2rem;
 }
@@ -218,7 +231,7 @@ h1 {
     border-color: var(--secundaria);
     transition: all 0.5s ease;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6),
-            0px 0px 12px var(--secundaria);
+             0px 0px 12px var(--secundaria);
 }
 
 .grupo-form {
@@ -240,51 +253,44 @@ h1 {
 .botao-form:hover {
     transform: translateY(-4px);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6),
-            0px 0px 12px var(--secundaria);
-    
+             0px 0px 12px var(--secundaria);
 }
 
+/* === Partículas (Background Animation) === */
 .particulas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0; /* fica atrás do conteúdo mas na frente do body */
-  pointer-events: none; /* não atrapalha clique */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .particula {
-  position: absolute;
-  border-radius: 50%;
-  background: var(--primaria);
-  opacity: 0.6;
-  animation: mover 15s linear infinite;
-  bottom: -20px; /* começa de baixo da tela */
-}
-
-@keyframes mover {
-  0% {
-    transform: translateY(0) scale(1);
+    position: absolute;
+    border-radius: 50%;
+    background: var(--primaria);
     opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-50vh) scale(1.3);
-  }
-  100% {
-    transform: translateY(-100vh) scale(0.8);
-    opacity: 0;
-  }
+    animation: mover 15s linear infinite;
+    bottom: -20px;
 }
 
-.cabecalho,
-.sobre,
-.projetos,
-.contatos {
-  position: relative;
-  z-index: 1;
+/* === Keyframes para Animações === */
+@keyframes mover {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-50vh) scale(1.3);
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.8);
+        opacity: 0;
+    }
 }
 
 @keyframes flutuar {
@@ -293,5 +299,110 @@ h1 {
     }
     50% { 
         transform: translateY(-20px);
+    }
+}
+
+
+/*
+ * ========================================
+ * 🔑 MEDIA QUERIES PARA RESPONSIVIDADE
+ * ========================================
+ * Ajustes para telas menores (smartphones e tablets pequenos)
+ */
+@media (max-width: 768px) {
+    
+    /* === Navegação === */
+    .navegacao {
+        padding: 0.75rem 1rem;
+    }
+
+    .menu {
+        gap: 1.5rem;
+        font-size: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .menu li {
+        margin-bottom: 0.5rem; 
+    }
+
+    /* === Cabeçalho (Início) === */
+    .cabecalho {
+        min-height: 80vh;
+        padding-top: 6rem;
+    }
+    
+    .foto-perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin: 15px 0;
+    }
+
+    .cabecalho-sub-titulo {
+        font-size: 1.1rem;
+    }
+
+    /* === Seções Gerais === */
+    .sobre,
+    .projetos,
+    .contatos {
+        padding: 4rem 1rem;
+    }
+
+    /* === Sobre Mim === */
+    .sobre-titulo {
+        font-size: 2.2rem;
+    }
+    
+    .sobre-caixa {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1rem;
+    }
+
+    /* === Projetos === */
+    .projeto-titulo {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .projetos-caixa {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+        max-width: 450px;
+    }
+    
+    .projetos-imagem {
+        height: 200px;
+    }
+    
+    .caixa-textos-projetos {
+        padding: 1rem;
+    }
+
+    /* === Contatos === */
+    .contatos-titulo {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    .formulario-contato {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    
+    .campo-form {
+        padding: 0.8rem;
+    }
+
+    .botao-form {
+        padding: 0.9rem 1.5rem;
     }
 }
