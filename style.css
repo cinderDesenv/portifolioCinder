@@ -130,6 +130,9 @@ h1 {
     padding: 6rem 2rem;
 }
 
+.projetos a {
+    text-decoration: none;
+}
 .projetos-caixa {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
