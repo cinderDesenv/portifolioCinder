@@ -23,7 +23,6 @@ body {
     color: var(--claro);
 }
 
-/* === Navegação === */
 .navegacao { 
     position: fixed;
     background: #179142;
@@ -93,7 +92,6 @@ h1 {
     color: var(--claro);
 }
 
-/* Garante que o conteúdo fique por cima das partículas */
 .cabecalho,
 .sobre,
 .projetos,
@@ -102,7 +100,6 @@ h1 {
     z-index: 1;
 }
 
-/* === Sobre Mim === */
 .sobre { 
     padding: 6rem 2rem;
 }
@@ -129,7 +126,6 @@ h1 {
     font-size: 1.2rem;
 }
 
-/* === Projetos === */
 .projetos {
     padding: 6rem 2rem;
 }
@@ -195,7 +191,6 @@ h1 {
     margin: 5px 16px;
 }
 
-/* === Contatos === */
 .contatos {
     padding: 6rem 2rem;
 }
@@ -256,7 +251,6 @@ h1 {
              0px 0px 12px var(--secundaria);
 }
 
-/* === Partículas (Background Animation) === */
 .particulas {
     position: fixed;
     top: 0;
@@ -277,7 +271,6 @@ h1 {
     bottom: -20px;
 }
 
-/* === Keyframes para Animações === */
 @keyframes mover {
     0% {
         transform: translateY(0) scale(1);
@@ -302,16 +295,8 @@ h1 {
     }
 }
 
-
-/*
- * ========================================
- * 🔑 MEDIA QUERIES PARA RESPONSIVIDADE
- * ========================================
- * Ajustes para telas menores (smartphones e tablets pequenos)
- */
 @media (max-width: 768px) {
     
-    /* === Navegação === */
     .navegacao {
         padding: 0.75rem 1rem;
     }
@@ -326,7 +311,6 @@ h1 {
         margin-bottom: 0.5rem; 
     }
 
-    /* === Cabeçalho (Início) === */
     .cabecalho {
         min-height: 80vh;
         padding-top: 6rem;
@@ -346,14 +330,12 @@ h1 {
         font-size: 1.1rem;
     }
 
-    /* === Seções Gerais === */
     .sobre,
     .projetos,
     .contatos {
         padding: 4rem 1rem;
     }
 
-    /* === Sobre Mim === */
     .sobre-titulo {
         font-size: 2.2rem;
     }
@@ -367,7 +349,6 @@ h1 {
         font-size: 1rem;
     }
 
-    /* === Projetos === */
     .projeto-titulo {
         font-size: 2.2rem;
         margin-bottom: 30px;
@@ -387,7 +368,6 @@ h1 {
         padding: 1rem;
     }
 
-    /* === Contatos === */
     .contatos-titulo {
         font-size: 2.2rem;
         margin-bottom: 30px;
