@@ -25,7 +25,7 @@ body {
 
 .navegacao { 
     position: fixed;
-    background: #179142;
+    background: var(--vidro);
     width: 100%;
     z-index: 100;
     padding: 1.0rem;
@@ -106,7 +106,6 @@ h1 {
 
 .sobre-titulo {
     font-size: 3rem;
-    color: var(--claro);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -154,7 +153,7 @@ h1 {
 .projetos-card:hover {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6),
              0px 0px 12px var(--primaria);
-    transform: translateY(-10px) scale(1.03);
+    transform: scale(1.01);
 }
 
 .projeto-titulo {
@@ -387,5 +386,77 @@ h1 {
 
     .botao-form {
         padding: 0.9rem 1.5rem;
+    }
+}
+
+.tags-linguagens {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; 
+    margin-bottom: 1rem; 
+    padding: 0 16px; 
+}
+
+.tag {
+    background: var(--vidro); 
+    color: var(--claro);
+    padding: 4px 10px;
+    border-radius: 20px; 
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px); 
+    transition: background 0.3s ease;
+}
+
+.tag:hover {
+    background: var(--primaria); 
+    color: var(--escuro);
+    box-shadow: 0 0 8px var(--primaria);
+}
+
+@media (max-width: 768px) {
+    .tags-linguagens {
+        padding: 0 1rem; 
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+}
+
+.link-repo {
+    display: inline-block; 
+    text-decoration: none;
+    color: var(--escuro) !important; 
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria)); 
+    padding: 8px 16px;
+    margin: 0 16px 15px;
+    border-radius: 8px; 
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.link-repo:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 12px var(--primaria);
+    opacity: 0.9;
+}
+
+.projetos a {
+    text-decoration: none;
+    color: var(--claro); 
+}
+
+@media (max-width: 768px) {
+    .link-repo {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        margin: 0 1rem 12px; 
     }
 }
