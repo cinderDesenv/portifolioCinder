@@ -5,10 +5,10 @@ function enviarMensagem(event) {
     const mensagem = document.getElementById("mensagem").value;
     const telefone = "5568999365536";
 
-    const texto = `Olá! Me chamo ${nome}, ${mensagem};`;
+    const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
     const msgFormatada = encodeURIComponent(texto);
 
     const url = `https://wa.me/${telefone}?text=${msgFormatada}`
 
-    window.open(url, "_blank");
+    window.open(url, "_blank")
 }
