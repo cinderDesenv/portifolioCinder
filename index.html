@@ -3,42 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJ/AH0eVpXbSjGSS+3j+rO2+0K7r5iN31a+aB8T0e9E3L25p2gQ9uG2V+6Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
-    <title>Portifólio</title>
+    <title>Portfólio | Elton Barbosa</title>
   </head>
   <body>
 
     <div class="particulas">
-        <span class="particula" style="width:10px; height:10px; left:10%; animation-duration: 12s;"></span>
-        <span class="particula" style="width:8px; height:8px; left:25%; animation-duration: 18s;"></span>
-        <span class="particula" style="width:6px; height:6px; left:40%; animation-duration: 10s;"></span>
-        <span class="particula" style="width:12px; height:12px; left:55%; animation-duration: 20s;"></span>
-        <span class="particula" style="width:7px; height:7px; left:70%; animation-duration: 15s;"></span>
-        <span class="particula" style="width:9px; height:9px; left:85%; animation-duration: 17s;"></span>
+      <span class="particula" style="width:10px; height:10px; left:10%; animation-duration: 12s;"></span>
+      <span class="particula" style="width:8px; height:8px; left:25%; animation-duration: 18s;"></span>
+      <span class="particula" style="width:6px; height:6px; left:40%; animation-duration: 10s;"></span>
+      <span class="particula" style="width:12px; height:12px; left:55%; animation-duration: 20s;"></span>
+      <span class="particula" style="width:7px; height:7px; left:70%; animation-duration: 15s;"></span>
+      <span class="particula" style="width:9px; height:9px; left:85%; animation-duration: 17s;"></span>
     </div>
 
-
     <nav class="navegacao">
-
-      <div class="caixa-menu">
-      <ul class="menu">
-        <li><a href="#inicio" class="menu-link">Inicio</a></li>
-        <li><a href="#sobre" class="menu-link">Sobre Mim</a></li>
-        <li><a href="#projetos" class="menu-link">Projetos</a></li>
-        <li><a href="#contatos" class="menu-link">Contato</a></li>
-      </ul>
+      <div class="container-nav">
+        <a href="#inicio" class="nav-logo">cinder<span class="logo-dot">Desenv</span></a>
+        
+        <div class="caixa-menu">
+          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+            <span class="hamburguer"></span>
+          </button>
+          
+          <ul class="menu" id="menu">
+            <li><a href="#inicio" class="menu-link"><i class="fas fa-home"></i> Início</a></li>
+            <li><a href="#sobre" class="menu-link"><i class="fas fa-user"></i> Sobre Mim</a></li>
+            <li><a href="#projetos" class="menu-link"><i class="fas fa-code"></i> Projetos</a></li>
+            <li><a href="#contatos" class="menu-link"><i class="fas fa-envelope"></i> Contato</a></li>
+          </ul>
+        </div>
       </div>
-
     </nav>
 
     <main id="inicio" class="cabecalho">
-      <img src="img/fotoElton.jpg" alt="icone Cinder" class="foto-perfil" />
+      <img src="img/fotoElton.jpg" alt="Foto de perfil de Elton Barbosa, Desenvolvedor Front-end & Java" class="foto-perfil" />
       <h1>Elton Barbosa</h1>
       <p class="cabecalho-sub-titulo">Desenvolvedor Front-end & Java</p>
+      <div class="botoes-acao">
+        <a href="#projetos" class="botao-primario">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+        <a href="#contatos" class="botao-secundario">Me Contrate</a>
+      </div>
     </main>
 
     <section id="sobre" class="sobre">
-      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <h2 class="titulo-secao">Sobre Mim</h2>
       <div class="sobre-caixa">
         <p class="sobre-paragrafo">
           Desenvolvedor Web com foco na usabilidade e performance.
@@ -49,98 +60,140 @@
           stack de tecnologias.
         </p>
       </div>
-    </section>
-
-    <section id="projetos" class="projetos">
-      <h2 class="projeto-titulo">Projetos</h2>
-      <div class="projetos-caixa">
-        <div class="projetos-card">
-          <img
-            src="img/projetoLojaTerminal.png"
-            alt="Projeto #1"
-            class="projetos-imagem"
-          />
-          <div class="caixa-textos-projetos">
-          <a href="https://github.com/cinderDesenv/lojaTerminal_CRUD" target="_blank" class="link-repo">Repositório Git Hub</a>
-            <h3 class="info-projetos">Sistema de Gerenciamento de Estoque (CRUD Loja)</h3>
-          <p class="paragrafo-projetos">
-            Aplicação de linha de comando construída em Java para
-            gerenciar produtos de uma loja. Utiliza Maven para dependências
-             e mantém o registro de dados persistente em um banco MySQL.
-          </p>
-              <div class="tags-linguagens">
-                <span class="tag">Java</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">Maven</span>
-              </div>
-          </div>
-        </div>
-
-        <div class="projetos-card">
-          <img
-            src="img/polegar.jpg"
-            alt="Projeto #2"
-            class="projetos-imagem"
-          />
-          <div class="caixa-textos-projetos">
-          <a href="https://github.com/cinderDesenv" target="_blank" class="link-repo">Repositório Git Hub</a>
-          <h3 class="info-projetos">XXXXXXXXXX</h3>
-          <p class="paragrafo-projetos">
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.
-          </p>
-              <div class="tags-linguagens">
-                <span class="tag">XXX</span>
-                <span class="tag">XXX</span>
-                <span class="tag">XXX</span>
-              </div>
-          </div>
-        </div>
-
-        <div class="projetos-card">
-          <img
-            src="img/polegar.jpg"
-            alt="Projeto #3"
-            class="projetos-imagem"
-          />
-          <div class="caixa-textos-projetos">
-          <a href="https://github.com/cinderDesenv" target="_blank" class="link-repo">Repositório Git Hub</a>
-          <h3 class="info-projetos">XXXXXXXXXX</h3>
-          <p class="paragrafo-projetos">
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-          </p>
-              <div class="tags-linguagens">
-                <span class="tag">XXX</span>
-                <span class="tag">XXX</span>
-                <span class="tag">XXX</span>
-              </div>
-          </div>
+      <div class="skills-caixa">
+        <h3 class="sub-titulo-skills">Meu Stack Principal</h3>
+        <div class="tags-linguagens">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Git</span>
+            <span class="tag">Maven</span>
         </div>
       </div>
     </section>
 
+    <section id="projetos" class="projetos">
+      <h2 class="titulo-secao">Projetos em Destaque</h2>
+      <div class="projetos-caixa">
+        
+        <div class="projetos-card">
+          <img
+            src="img/projetoLojaTerminal.png"
+            alt="Captura de tela do Sistema de Gerenciamento de Estoque (CRUD Loja) em Java, rodando no terminal."
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+          
+            <h3 class="info-projetos">Sistema de Gerenciamento de Estoque (CRUD Loja)</h3>
+            <p class="paragrafo-projetos">
+              Aplicação de linha de comando construída em Java para gerenciar
+              produtos de uma loja. Utiliza Maven para dependências e mantém o
+              registro de dados persistente em um banco MySQL.
+            </p>
+            <div class="tags-linguagens">
+              <span class="tag">Java</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Maven</span>
+            </div>
+
+            <a href="https://github.com/cinderDesenv/lojaTerminal_CRUD" target="_blank" class="link-repo">
+              <i class="fab fa-github"></i> Repositório
+            </a>
+
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="img/projetoLojaTerminal.png"
+            alt="Captura de tela de um Web App de exemplo."
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">XXXXX</h3>
+            <p class="paragrafo-projetos">
+              XXXXXXXXXXXXXXXXXXXX
+            </p>
+            <div class="tags-linguagens">
+              <span class="tag">XXXXX</span>
+              <span class="tag">XXXXX</span>
+              <span class="tag">XXXXX</span>
+            </div>
+
+            <a href="https://github.com/cinderDesenv/lojaTerminal_CRUD" target="_blank" class="link-repo">
+              <i class="fab fa-github"></i> Repositório
+            </a>
+          </div>
+        </div>
+
+        <div class="projetos-card">
+          <img
+            src="img/projetoLojaTerminal.png"
+            alt="Captura de tela de um projeto de API em Java."
+            class="projetos-imagem"
+          />
+          <div class="caixa-textos-projetos">
+            <h3 class="info-projetos">XXXXX</h3>
+            <p class="paragrafo-projetos">
+              XXXXXXXXXXXXXXXXXXXX
+            </p>
+            <div class="tags-linguagens">
+              <span class="tag">XXXXX</span>
+              <span class="tag">XXXXX</span>
+              <span class="tag">XXXXX</span>
+            </div>
+
+            <a href="https://github.com/cinderDesenv/lojaTerminal_CRUD" target="_blank" class="link-repo">
+              <i class="fab fa-github"></i> Repositório
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contatos-links-externos">
+        <a href="https://github.com/cinderDesenv" target="_blank" class="link-externo" aria-label="Meu Github">
+          <i class="fab fa-github"></i> Todos os Projetos
+        </a>
+      </div>
+    </section>
+
     <section id="contatos" class="contatos">
-      <h2 class="contatos-titulo">Entre em Contato</h2>
+      <h2 class="titulo-secao">Entre em Contato</h2>
+      <p class="contatos-subtitulo">Vamos construir algo incrível juntos?</p>
 
-      <form class="formulario-contato" id="formulario" onsubmit="enviarMensagem(event)">
+      <form class="formulario-contato" id="formulario">
 
         <div class="grupo-form">
-          <input placeholder="Nome" class="campo-form" id="nome">
+          <label for="nome" class="form-label">Seu Nome</label>
+          <input placeholder="Seu Nome Completo" class="campo-form" id="nome" required>
         </div>
 
         <div class="grupo-form">
-          <textarea class="campo-form" placeholder="O que eu posso fazer por você?" rows="8"
-           id="mensagem"></textarea>
+          <label for="mensagem" class="form-label">Sua Mensagem</label>
+          <textarea class="campo-form" placeholder="O que eu posso fazer por você?" rows="6"
+            id="mensagem" required></textarea>
         </div>
 
-        <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        <button type="submit" class="botao-form">Enviar Mensagem (WhatsApp) <i class="fab fa-whatsapp"></i></button>
       </form>
     </section>
+
+    <footer class="rodape">
+      <div class="rodape-caixa">
+        <p>&copy; 2024 Elton Barbosa.</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/seulinkedin" target="_blank" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/seugithub" target="_blank" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
   </body>
-
-  <script src="script.js"></script>
-
 </html>
